@@ -1,5 +1,5 @@
 # Nawy_apartments_app
-This is a Node.js and PostgreSQL-based application that allows users to manage apartment listings, including adding new apartments, retrieving apartment details, and viewing projects by developers.
+This is a React, Node.js and PostgreSQL-based application that allows users to manage apartment listings, including adding new apartments, retrieving apartment details, and viewing projects by developers.
 
 Table of Contents
 Setup
