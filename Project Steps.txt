@@ -1,0 +1,114 @@
+1. Project Setup
+a. Repository and Version Control -->Done
+	Create a new GitHub repository for the project.
+	Set up a .gitignore file to exclude unnecessary files (e.g., node_modules, .env, etc.).
+b. Docker and Docker-Compose Setup  --> Done
+	Install Docker and Docker-Compose if you haven’t already.
+
+	Create a Dockerfile for the backend application:
+
+	Base it on an official Node.js image.
+	Copy your application code.
+	Install dependencies and set up the application to run.
+	Create another Dockerfile for the frontend application:
+
+	Base it on an official Node.js image.
+	Copy your application code.
+	Install dependencies and set up the application to run.
+	Create a docker-compose.yml file to configure and orchestrate the backend, frontend, and database services.
+
+2. Backend Application (Node.js with TypeScript) -->Done
+a. Project Initialization -->Done
+	Initialize the project with npm init or yarn init.
+	Set up TypeScript in your Node.js project:
+	Install TypeScript and necessary types.
+	Create a tsconfig.json file.
+b. Set Up Express.js -->Done
+	Install express for handling API routes.
+	Create a basic server setup in src/index.ts.
+c. API Endpoints -->Done
+	Add Apartment Endpoint:
+	Create a POST endpoint /api/apartments.
+	Validate the request body with a validation library (e.g., Joi, class-validator). -->Done
+	Insert the apartment data into the database.
+
+	List Apartments Endpoint: -->Done
+	Create a GET endpoint /api/apartments.
+	Fetch the list of apartments from the database and return it.
+	Get Apartment Details Endpoint:
+
+	Create a GET endpoint /api/apartments/:id. -->Done
+	Fetch the apartment details by ID from the database and return it.
+
+d. Database Integration -->Done
+	Choose a database (e.g., PostgreSQL, MongoDB).
+	Use an ORM/ODM (e.g., TypeORM, Mongoose) to interact with the database.
+	Set up models/schemas for the apartment entity.
+	Implement migration/seed scripts if necessary.
+
+e. Dockerize the Backend -->Done
+	Set up the Dockerfile to build and run the Node.js app.
+	Expose the appropriate port.
+3. Frontend Application (React)
+a. Project Initialization -->Done
+	Set up a new React project using Create React App with TypeScript support:
+	bash
+	npx create-react-app apartment-listing --template typescript
+	Organize the project structure (e.g., components, pages, styles).
+b. Apartment Listing Page --> Done 
+	Create a component to fetch and display the list of apartments:
+	Use useEffect to fetch data from the backend API.
+	Render a list of apartments showing key information (e.g., name, price, etc.).
+	Each apartment should link to a details page using React Router.
+	Set up routing using react-router-dom:
+	Define routes for the listing page and details page.
+c. Apartment Details Page --> Done
+	Create a component to fetch and display details of an apartment based on its id.
+	Use useEffect to fetch data from the backend API using the id from route parameters.
+	Render detailed information about the apartment.
+	Add a back button to return to the listing page.
+d. Responsive Design
+	Use CSS-in-JS (e.g., styled-components, emotion) or a CSS framework (e.g., Tailwind CSS, Bootstrap) to make the pages responsive.
+	Test on various screen sizes to ensure a good user experience.
+e. Dockerize the Frontend  --> Done
+	Set up the Dockerfile to build and run the React app.
+	Expose the appropriate port.
+4. Database Setup -->Done
+a. Database Selection and Setup -->Done
+	If using PostgreSQL:
+	Create a docker-compose service for PostgreSQL. --> Done
+	Configure the database with environment variables. --> No Need 
+	Set up database migrations using tools like knex.js or with the ORM.  --> No Need
+5. Final Integration and Testing
+a. Compose All Services --> Done
+	Use docker-compose up --build to build and start all services (frontend, backend, database).
+	Verify that the services are correctly communicating with each other.
+b. Test the Application --> Done
+	Test all API endpoints using a tool like Postman or curl.
+	Test the frontend by navigating through the pages and interacting with the API.
+	Ensure the application is functioning as expected across different devices.
+6. Documentation 
+a. Document API Endpoints
+	Create a README.md file in your repository.
+	Document the API endpoints, request parameters, and response structure.
+	Provide examples of API calls.
+b. Usage and Setup Instructions
+	Include setup instructions in the README.md:
+	How to clone the repository.
+	How to build and run the application with Docker.
+	Any environment variables that need to be configured.
+7. Polishing and Submission 
+a. Refactor and Clean Code
+	Review your code for any improvements or refactoring.
+	Ensure consistency in coding style.
+b. Commit and Push
+	Make sure all changes are committed.
+	Push your code to the GitHub repository.
+c. Grant Access
+	If the repository is private, invite NawyDevHiring as a collaborator.
+d. Send Submission
+	Reply to the assignment email with the GitHub repository link.
+8. Optional Enhancements (If Time Permits) --> Done
+	Add pagination or filtering options to the apartment listing page.
+	Implement basic error handling and validation on the frontend.
+	Improve the UI/UX with additional design elements.

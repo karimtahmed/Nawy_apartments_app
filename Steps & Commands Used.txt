@@ -1,0 +1,45 @@
+# Nawy_apartments_app
+1- create repo for app
+2- install docker
+3- install docker compose
+4- docker front
+5- docker back
+6- docker-compose.yml
+7- npm init
+8- npm install express
+9- npm install --save-dev nodemon
+10- node app.js / npm run dev
+11- docker run --name postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
+12- docker exec -it postgres /bin/bash
+13- psql -U postgres
+14- CREATE DATABASE mydatabase;
+15- \c mydatabase
+16- CREATE TABLE apartments (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    location VARCHAR(100),
+    price DECIMAL(10, 2) NOT NULL,
+    image_url VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+17- \d apartments
+18- INSERT INTO apartments (name, location, price) VALUES ('Luxury Apartment', 'City Center', 12000000.00);
+CREATE TABLE public.projects (
+    id integer NOT NULL,
+    name character varying(100) NOT NULL,
+    location character varying(100),
+    developer character varying(255),
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP
+);
+
+19- docker-compose up -d // docker-compose up --build
+20- docker ps
+21- docker exec -it b38453b4b2d5 sh
+22- recreate apartments table on the docker container as you have changed the port used
+23- npx create-react-app my-app
+24-CORS issue. added cors to backend or use Heroku third party (Cross-origin resource sharing)
+25-docker cp mydatabase_dump.sql <container_name>:/mydatabase_dump.sql
+26-docker exec -it <container_name> bash
+27-psql -U postgres -d mydatabase -f /mydatabase_dump.sql
+
+
